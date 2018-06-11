@@ -16,6 +16,8 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var viewModeARSCN: ARSCNView!
     private var scanTimer: Timer?
     private var scannedFaceViews = [UIView]()
+    let model = SCNScene(named: "art.scnassets/cap/SantaHat.scn")
+    let modelNode = SCNNode()
     
     private var imageOrientation: CGImagePropertyOrientation {
         switch UIDevice.current.orientation {
@@ -63,21 +65,21 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
       //  let cc = getCameraCoordinates(SceneView: SceneView)
       //  modelNode.position = SCNVector3(cc.x, cc.y, cc.z)
         
-        let model = SCNScene(named: "art.scnassets/baymax/Bigmax_White_OBJ.scn")
+        
         
         SceneView.scene = model!
         
-     //   let wrapperNode = SCNNode()
-       // for child in model.rootNode.childNodes{
-         //   child.geometry?.firstMaterial?.lightingModel = .physicallyBased
-           // wrapperNode.addChildNode(child)
-        //}
+        let wrapperNode = SCNNode()
+        for child in (model?.rootNode.childNodes)!{
+            child.geometry?.firstMaterial?.lightingModel = .physicallyBased
+            wrapperNode.addChildNode(child)
+        }
         
-       // modelNode.addChildNode(wrapperNode)
+       modelNode.addChildNode(wrapperNode)
         
         
         
-       // viewModeARSCN.scene.rootNode.addChildNode(modelNode)
+       viewModeARSCN.scene.rootNode.addChildNode(modelNode)
         
     }
     struct myCameraCoordinates{
@@ -136,10 +138,15 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
                     for face in faces {
                         let faceView = UIView(frame: self.faceFrame(from: face.boundingBox))
                         
+                        
+                        self.modelNode.position = SCNVector3(x: Float(face.boundingBox.maxX/2),y: Float(face.boundingBox.minY),z: 0)
+                        
+                        //threeDModelView.
+                        
                         faceView.backgroundColor = .red
                         
                         self.viewModeARSCN.addSubview(faceView)
-                        
+                        self.viewModeARSCN.scene = self.model!
                         self.scannedFaceViews.append(faceView)
                     }
                 }
