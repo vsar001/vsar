@@ -16,8 +16,8 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var viewModeARSCN: ARSCNView!
     private var scanTimer: Timer?
     private var scannedFaceViews = [UIView]()
-    let model = SCNScene(named: "art.scnassets/cap/SantaHat.scn")
-    let modelNode = SCNNode()
+    var santaHat = SCNNode()
+    var modelScene : SCNScene?
     
     private var imageOrientation: CGImagePropertyOrientation {
         switch UIDevice.current.orientation {
@@ -39,47 +39,59 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
         // Do any additional setup after loading the view.
         
         // creates text with depth
-        let text = SCNText(string: " was geht jo !", extrusionDepth: 1)
+        //let text = SCNText(string: " was geht jo !", extrusionDepth: 1)
         
         // creates material object, sets color, assigns material to text
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor.green
-        text.materials = [material]
+        //let material = SCNMaterial()
+        //material.diffuse.contents = UIColor.green
+        //text.materials = [material]
         
         // creates node, sets position, scales size of text, sets textgeometry to node
-        let node = SCNNode()
-        node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
-        node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
-        node.geometry = text
+        //let node = SCNNode()
+        //node.position = SCNVector3(x: 0, y:0.02, z: -0.1)
+        //node.scale = SCNVector3(x: 0.01, y: 0.01, z: 0.01)
+        //node.geometry = text
         
         // adds node to view, enable lighting to display shadows
-        viewModeARSCN.scene.rootNode.addChildNode(node)
+        //viewModeARSCN.scene.rootNode.addChildNode(node)
         addModel(SceneView: viewModeARSCN)
         viewModeARSCN.autoenablesDefaultLighting = true
         
     }
     //https://www.youtube.com/watch?v=tgPV_cRf2hA
     func addModel(SceneView: ARSCNView) {
-      //  let modelNode = SCNNode()
+        //  let modelNode = SCNNode()
         
-      //  let cc = getCameraCoordinates(SceneView: SceneView)
-      //  modelNode.position = SCNVector3(cc.x, cc.y, cc.z)
+        //  let cc = getCameraCoordinates(SceneView: SceneView)
+        //  modelNode.position = SCNVector3(cc.x, cc.y, cc.z)
+        
+        let model = SCNScene(named: "art.scnassets/SantaHat/SantaHat.scn")!
+        SceneView.scene = model
         
         
+        //let santaHatNode = model.rootNode.childNode(withName: "SantaHatNode", recursively: false)
+        //santaHatNode?.position = SCNVector3(0,-3,-3)
         
-        SceneView.scene = model!
-        
-        let wrapperNode = SCNNode()
-        for child in (model?.rootNode.childNodes)!{
-            child.geometry?.firstMaterial?.lightingModel = .physicallyBased
-            wrapperNode.addChildNode(child)
+        SceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            if (node.name == "SantaHatNode"){
+                print("found hat!")
+                santaHat = node
+                santaHat.isHidden = true
+                //santaHat.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: santaHat, options: nil))
+            }
         }
+        modelScene = model
+        //   let wrapperNode = SCNNode()
+        // for child in model.rootNode.childNodes{
+        //   child.geometry?.firstMaterial?.lightingModel = .physicallyBased
+        // wrapperNode.addChildNode(child)
+        //}
         
-       modelNode.addChildNode(wrapperNode)
+        // modelNode.addChildNode(wrapperNode)
         
         
         
-       viewModeARSCN.scene.rootNode.addChildNode(modelNode)
+        // viewModeARSCN.scene.rootNode.addChildNode(modelNode)
         
     }
     struct myCameraCoordinates{
@@ -138,15 +150,33 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
                     for face in faces {
                         let faceView = UIView(frame: self.faceFrame(from: face.boundingBox))
                         
-                        
-                        self.modelNode.position = SCNVector3(x: Float(face.boundingBox.maxX/2),y: Float(face.boundingBox.minY),z: 0)
-                        
-                        //threeDModelView.
-                        
                         faceView.backgroundColor = .red
                         
+                        let xUpperLeftFF = face.boundingBox.minX * self.viewModeARSCN.bounds.width
+                        let yUpperLeftFF = (1 - face.boundingBox.maxY) * self.viewModeARSCN.bounds.height
+                        let widthFF = face.boundingBox.width * self.viewModeARSCN.bounds.width
+                        let heightFF = face.boundingBox.height * self.viewModeARSCN.bounds.height
+                        let scaleFactor = ((widthFF/100)*(heightFF/100))/3
+                        
+                        NSLog("xFF : %f  yFF : %f", xUpperLeftFF, yUpperLeftFF)
+                        NSLog("widthFF : %f  heightFF : %f", widthFF, heightFF)
+                        NSLog("minX : %f  minY : %f", face.boundingBox.minX, face.boundingBox.minY)
+                        NSLog("maxX : %f  maxY : %f", face.boundingBox.maxX, face.boundingBox.maxY)
+                        NSLog("scaleFactor : %f", scaleFactor)
+                        
+                        let scaleAction = SCNAction.scale(to: scaleFactor, duration: 0)
+                        let moveAction = SCNAction.move(to: SCNVector3((face.boundingBox.maxX/2),(face.boundingBox.minY),-1), duration: 0)
+                        //let actionSequence = SCNAction.sequence([scaleAction,moveAction])
+                        
+                        self.santaHat.runAction(scaleAction)
+                        self.santaHat.runAction(moveAction)
+                        
+                        self.santaHat.isHidden = false
+                        //self.santaHat.position = SCNVector3((widthFF/2),0,-3)
+                        self.viewModeARSCN.scene = self.modelScene!
+                        
                         self.viewModeARSCN.addSubview(faceView)
-                        self.viewModeARSCN.scene = self.model!
+                        
                         self.scannedFaceViews.append(faceView)
                     }
                 }
