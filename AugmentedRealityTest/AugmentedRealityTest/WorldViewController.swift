@@ -14,10 +14,14 @@ import Vision
 class WorldViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var viewModeARSCN: ARSCNView!
-    private var scanTimer: Timer?
-    private var scannedFaceViews = [UIView]()
+    
     var santaHat = SCNNode()
     var modelScene : SCNScene?
+    
+    let wft : WorldFaceTracking = WorldFaceTracking()
+    
+    private var scanTimer: Timer?
+    private var scannedFaceViews = [UIView]()
     
     private var imageOrientation: CGImagePropertyOrientation {
         switch UIDevice.current.orientation {
@@ -119,7 +123,8 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
         // Run the view's session
         viewModeARSCN.session.run(configuration)
         
-        scanTimer = Timer.scheduledTimer(timeInterval: 0.08, target: self, selector: #selector(scanForFaces), userInfo: nil, repeats: true)
+        wft.setARSCNView(SceneView: viewModeARSCN)
+        scanTimer = Timer.scheduledTimer(timeInterval: 0.08, target: self, selector: #selector(self.scanForFaces), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -128,78 +133,7 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
         scanTimer?.invalidate()
         // Pause the view's session
         viewModeARSCN.session.pause()
-    }
-    
-    @objc
-    private func scanForFaces() {
-        
-        //remove the test views and empty the array that was keeping a reference to them
-        _ = scannedFaceViews.map { $0.removeFromSuperview() }
-        scannedFaceViews.removeAll()
-        
-        //get the captured image of the ARSession's current frame
-        guard let capturedImage = viewModeARSCN.session.currentFrame?.capturedImage else { return }
-        
-        let image = CIImage.init(cvPixelBuffer: capturedImage)
-        
-        let detectFaceRequest = VNDetectFaceRectanglesRequest { (request, error) in
-            
-            DispatchQueue.main.async {
-                //Loop through the resulting faces and add a red UIView on top of them.
-                if let faces = request.results as? [VNFaceObservation] {
-                    for face in faces {
-                        let faceView = UIView(frame: self.faceFrame(from: face.boundingBox))
-                        
-                        faceView.backgroundColor = .red
-                        
-                        let xUpperLeftFF = face.boundingBox.minX * self.viewModeARSCN.bounds.width
-                        let yUpperLeftFF = (1 - face.boundingBox.maxY) * self.viewModeARSCN.bounds.height
-                        let widthFF = face.boundingBox.width * self.viewModeARSCN.bounds.width
-                        let heightFF = face.boundingBox.height * self.viewModeARSCN.bounds.height
-                        let scaleFactor = ((widthFF/100)*(heightFF/100))/3
-                        
-                        NSLog("xFF : %f  yFF : %f", xUpperLeftFF, yUpperLeftFF)
-                        NSLog("widthFF : %f  heightFF : %f", widthFF, heightFF)
-                        NSLog("minX : %f  minY : %f", face.boundingBox.minX, face.boundingBox.minY)
-                        NSLog("maxX : %f  maxY : %f", face.boundingBox.maxX, face.boundingBox.maxY)
-                        NSLog("scaleFactor : %f", scaleFactor)
-                        
-                        let scaleAction = SCNAction.scale(to: scaleFactor, duration: 0)
-                        let moveAction = SCNAction.move(to: SCNVector3((face.boundingBox.maxX/2),(face.boundingBox.minY),-1), duration: 0)
-                        //let actionSequence = SCNAction.sequence([scaleAction,moveAction])
-                        
-                        self.santaHat.runAction(scaleAction)
-                        self.santaHat.runAction(moveAction)
-                        
-                        self.santaHat.isHidden = false
-                        //self.santaHat.position = SCNVector3((widthFF/2),0,-3)
-                        self.viewModeARSCN.scene = self.modelScene!
-                        
-                        self.viewModeARSCN.addSubview(faceView)
-                        
-                        self.scannedFaceViews.append(faceView)
-                    }
-                }
-            }
-        }
-        
-        DispatchQueue.global().async {
-            try? VNImageRequestHandler(ciImage: image, orientation: self.imageOrientation).perform([detectFaceRequest])
-        }
-    }
-    
-    private func faceFrame(from boundingBox: CGRect) -> CGRect {
-        
-        //translate camera frame to frame inside the ARSKView
-        let origin = CGPoint(x: boundingBox.minX * viewModeARSCN.bounds.width, y: (1 - boundingBox.maxY) * viewModeARSCN.bounds.height)
-        let size = CGSize(width: boundingBox.width * viewModeARSCN.bounds.width, height: boundingBox.height * viewModeARSCN.bounds.height)
-        
-        return CGRect(origin: origin, size: size)
-    }
-    
-    
-    
-    
+    }    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -240,6 +174,83 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
      // Pass the selected object to the new view controller.
      }
      */
+
+    
+    @objc
+    private func scanForFaces() {
+        
+        //remove the test views and empty the array that was keeping a reference to them
+        _ = scannedFaceViews.map { $0.removeFromSuperview() }
+        scannedFaceViews.removeAll()
+        
+        //get the captured image of the ARSession's current frame
+        guard let capturedImage = viewModeARSCN.session.currentFrame?.capturedImage else { return }
+        
+        let image = CIImage.init(cvPixelBuffer: capturedImage)
+        
+        let detectFaceRequest = VNDetectFaceRectanglesRequest { (request, error) in
+            
+            DispatchQueue.main.async {
+                //Loop through the resulting faces and add a red UIView on top of them.
+                if let faces = request.results as? [VNFaceObservation] {
+                    if (faces.isEmpty){
+                        NSLog(" NO FACE FOUND !")
+                        self.santaHat.isHidden = true
+                    }
+                    else{
+                        for face in faces {
+                            self.santaHat.isHidden = false
+                            let faceView = UIView(frame: self.faceFrame(from: face.boundingBox))
+                            
+                            faceView.backgroundColor = .red
+                            
+                            let xUpperLeftFF = face.boundingBox.minX * self.viewModeARSCN.bounds.width
+                            let yUpperLeftFF = (1 - face.boundingBox.maxY) * self.viewModeARSCN.bounds.height
+                            let widthFF = face.boundingBox.width * self.viewModeARSCN.bounds.width
+                            let heightFF = face.boundingBox.height * self.viewModeARSCN.bounds.height
+                            let scaleFactor = ((widthFF/100)*(heightFF/100))/3
+                            
+                            NSLog("faceViewx : %f  faceViewy : %f", faceView.bounds.midX, faceView.bounds.minY)
+                            NSLog("xFF : %f  yFF : %f", xUpperLeftFF, yUpperLeftFF)
+                            NSLog("widthFF : %f  heightFF : %f", widthFF, heightFF)
+                            NSLog("minX : %f  minY : %f", face.boundingBox.minX, face.boundingBox.minY)
+                            NSLog("maxX : %f  maxY : %f", face.boundingBox.maxX, face.boundingBox.maxY)
+                            NSLog("scaleFactor : %f", scaleFactor)
+                            
+                            let scaleAction = SCNAction.scale(to: scaleFactor, duration: 0.07)
+                            let moveAction = SCNAction.move(to: SCNVector3((face.boundingBox.maxX/2),(face.boundingBox.minY),-1), duration: 0.07)
+                            //let moveAction = SCNAction.move(to: SCNVector3(faceView.bounds.midX,faceView.bounds.minY,-1), duration: 0.07)
+                            //let actionSequence = SCNAction.sequence([scaleAction,moveAction])
+                            
+                            self.santaHat.runAction(scaleAction)
+                            self.santaHat.runAction(moveAction)
+                            
+                            
+                            //self.santaHat.position = SCNVector3((widthFF/2),0,-3)
+                            self.viewModeARSCN.scene = self.modelScene!
+                            
+                            self.viewModeARSCN.addSubview(faceView)
+                            
+                            self.scannedFaceViews.append(faceView)
+                        }
+                    }
+                }
+            }
+        }
+        
+        DispatchQueue.global().async {
+            try? VNImageRequestHandler(ciImage: image, orientation: self.imageOrientation).perform([detectFaceRequest])
+        }
+    }
+    
+    private func faceFrame(from boundingBox: CGRect) -> CGRect {
+        
+        //translate camera frame to frame inside the ARSKView
+        let origin = CGPoint(x: boundingBox.minX * viewModeARSCN.bounds.width, y: (1 - boundingBox.maxY) * viewModeARSCN.bounds.height)
+        let size = CGSize(width: boundingBox.width * viewModeARSCN.bounds.width, height: boundingBox.height * viewModeARSCN.bounds.height)
+        
+        return CGRect(origin: origin, size: size)
+    }
     
     
 }

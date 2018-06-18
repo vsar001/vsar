@@ -204,7 +204,7 @@
                     <navigationItem key="navigationItem" id="Nbb-lF-lgX"/>
                     <connections>
                         <outlet property="modelCollectionMenue" destination="uxf-m9-5aK" id="rKe-Rd-6tg"/>
-                        <outlet property="sceneView" destination="6zu-6d-iQx" id="szs-Tr-1I6"/>
+                        <outlet property="viewModeARSCN" destination="6zu-6d-iQx" id="JyW-p1-LUX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
