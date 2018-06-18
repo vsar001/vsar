@@ -106,7 +106,7 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
     func getCameraCoordinates(SceneView: ARSCNView) -> myCameraCoordinates{
         let cameraTransform = viewModeARSCN.session.currentFrame?.camera.transform
         let cameraCoordinates = MDLTransform(matrix: cameraTransform!)
-        
+        //
         var cc = myCameraCoordinates()
         cc.x = cameraCoordinates.translation.x
         cc.y = cameraCoordinates.translation.y
