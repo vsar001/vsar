@@ -16,6 +16,14 @@
 		01B998ED20BEAACC00FA5E1D /* AugmentedRealityTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B998EC20BEAACC00FA5E1D /* AugmentedRealityTestTests.swift */; };
 		01B998F820BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B998F720BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift */; };
 		01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B9990720BEB93100FA5E1D /* WorldViewController.swift */; };
+		9607962120D459A4003B0352 /* VSdb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9607961F20D459A4003B0352 /* VSdb.xcdatamodeld */; };
+		96CB660220D76D65007B1D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660120D76D65007B1D4A /* LoginViewController.swift */; };
+		96CB660420D791E9007B1D4A /* AddModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660320D791E9007B1D4A /* AddModelController.swift */; };
+		96CB660E20D79C2B007B1D4A /* StatetmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660A20D79C2A007B1D4A /* StatetmentModel.swift */; };
+		96CB660F20D79C2B007B1D4A /* VSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660B20D79C2A007B1D4A /* VSUser.swift */; };
+		96CB661020D79C2B007B1D4A /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660C20D79C2B007B1D4A /* PetModel.swift */; };
+		96CB661520D79D04007B1D4A /* userAdded3dModels.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */; };
+		96CB661720D79E63007B1D4A /* HatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB661620D79E63007B1D4A /* HatModel.swift */; };
 		FA51003120C99F5D001CEC58 /* WorldFaceTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +60,14 @@
 		01B998F720BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityTestUITests.swift; sourceTree = "<group>"; };
 		01B998F920BEAACC00FA5E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B9990720BEB93100FA5E1D /* WorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
+		9607962020D459A4003B0352 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		96CB660120D76D65007B1D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		96CB660320D791E9007B1D4A /* AddModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelController.swift; sourceTree = "<group>"; };
+		96CB660A20D79C2A007B1D4A /* StatetmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatetmentModel.swift; sourceTree = "<group>"; };
+		96CB660B20D79C2A007B1D4A /* VSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSUser.swift; sourceTree = "<group>"; };
+		96CB660C20D79C2B007B1D4A /* PetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
+		96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = userAdded3dModels.scnassets; sourceTree = SOURCE_ROOT; };
+		96CB661620D79E63007B1D4A /* HatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatModel.swift; sourceTree = "<group>"; };
 		FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldFaceTracking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +99,7 @@
 		01B998C920BEAACB00FA5E1D = {
 			isa = PBXGroup;
 			children = (
+				960795DD20D4397D003B0352 /* VirtualStyles */,
 				01B998D420BEAACB00FA5E1D /* AugmentedRealityTest */,
 				01B998EB20BEAACC00FA5E1D /* AugmentedRealityTestTests */,
 				01B998F620BEAACC00FA5E1D /* AugmentedRealityTestUITests */,
@@ -103,6 +120,7 @@
 		01B998D420BEAACB00FA5E1D /* AugmentedRealityTest */ = {
 			isa = PBXGroup;
 			children = (
+				96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */,
 				01B998D520BEAACB00FA5E1D /* AppDelegate.swift */,
 				01B998D720BEAACB00FA5E1D /* art.scnassets */,
 				01B998D920BEAACB00FA5E1D /* SelfViewController.swift */,
@@ -112,6 +130,9 @@
 				01B998E320BEAACC00FA5E1D /* Info.plist */,
 				01B9990720BEB93100FA5E1D /* WorldViewController.swift */,
 				FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */,
+				9607961F20D459A4003B0352 /* VSdb.xcdatamodeld */,
+				96CB660120D76D65007B1D4A /* LoginViewController.swift */,
+				96CB660320D791E9007B1D4A /* AddModelController.swift */,
 			);
 			path = AugmentedRealityTest;
 			sourceTree = "<group>";
@@ -132,6 +153,33 @@
 				01B998F920BEAACC00FA5E1D /* Info.plist */,
 			);
 			path = AugmentedRealityTestUITests;
+			sourceTree = "<group>";
+		};
+		960795DD20D4397D003B0352 /* VirtualStyles */ = {
+			isa = PBXGroup;
+			children = (
+				96CB660520D79B8B007B1D4A /* DB */,
+				960795DF20D4531A003B0352 /* MultipeerConnect */,
+			);
+			path = VirtualStyles;
+			sourceTree = "<group>";
+		};
+		960795DF20D4531A003B0352 /* MultipeerConnect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MultipeerConnect;
+			sourceTree = "<group>";
+		};
+		96CB660520D79B8B007B1D4A /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				96CB660C20D79C2B007B1D4A /* PetModel.swift */,
+				96CB660A20D79C2A007B1D4A /* StatetmentModel.swift */,
+				96CB660B20D79C2A007B1D4A /* VSUser.swift */,
+				96CB661620D79E63007B1D4A /* HatModel.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +245,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Anonymer Eintrag";
 				TargetAttributes = {
 					01B998D120BEAACB00FA5E1D = {
@@ -242,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B998D820BEAACB00FA5E1D /* art.scnassets in Resources */,
+				96CB661520D79D04007B1D4A /* userAdded3dModels.scnassets in Resources */,
 				01B998E220BEAACC00FA5E1D /* LaunchScreen.storyboard in Resources */,
 				01B998DF20BEAACC00FA5E1D /* Assets.xcassets in Resources */,
 				01B998DD20BEAACC00FA5E1D /* Main.storyboard in Resources */,
@@ -269,9 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CB660220D76D65007B1D4A /* LoginViewController.swift in Sources */,
 				FA51003120C99F5D001CEC58 /* WorldFaceTracking.swift in Sources */,
 				01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */,
+				96CB661020D79C2B007B1D4A /* PetModel.swift in Sources */,
+				9607962120D459A4003B0352 /* VSdb.xcdatamodeld in Sources */,
+				96CB660420D791E9007B1D4A /* AddModelController.swift in Sources */,
 				01B998DA20BEAACB00FA5E1D /* SelfViewController.swift in Sources */,
+				96CB661720D79E63007B1D4A /* HatModel.swift in Sources */,
+				96CB660E20D79C2B007B1D4A /* StatetmentModel.swift in Sources */,
+				96CB660F20D79C2B007B1D4A /* VSUser.swift in Sources */,
 				01B998D620BEAACB00FA5E1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +397,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -348,6 +405,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -398,6 +456,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -405,6 +464,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -572,6 +632,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9607961F20D459A4003B0352 /* VSdb.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9607962020D459A4003B0352 /* Model.xcdatamodel */,
+			);
+			currentVersion = 9607962020D459A4003B0352 /* Model.xcdatamodel */;
+			path = VSdb.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 01B998CA20BEAACB00FA5E1D /* Project object */;
 }
