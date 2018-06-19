@@ -12,44 +12,7 @@ import UIKit
 class AddModelController: UIViewController {
 
     @IBAction func save3DObject(_ sender: UIButton) {
-        selectFolder()
        
-        /*
-        let userChoice = openPanel.runModal()
-        switch userChoice{
-        //openPanel.prompt = "Save Model"
-        case .OK :
-            let panelResult = openPanel.url
-            if let panelResult = panelResult {
-                //do something with the result
-            }
-        case .cancel :
-            print("user cancelled")
-        default:
-            print("An open panel will never return anything other than OK or cancel")
-        }
- */
-    }
-    
-    func selectFolder(){
-        let openPanel = NSOpenPanel()
-        openPanel.title = ""
-        openPanel.message = ""
-        openPanel.showsResizeIndicator=true;
-        openPanel.canChooseDirectories = true;
-        openPanel.canChooseFiles = false;
-        openPanel.allowsMultipleSelection = false;
-        openPanel.canCreateDirectories = true;
-        openPanel.delegate = self;
-        
-        openPanel.beginWithCompletionHandler { (result) -> Void in
-            if(result == NSFileHandlingPanelOKButton){
-                let path = openPanel.URL!.path!
-                print("selected folder is \(path)");
-                self.savePref("", value: path);
-            }
-        }
-        
     }
     
     override func viewDidLoad() {
