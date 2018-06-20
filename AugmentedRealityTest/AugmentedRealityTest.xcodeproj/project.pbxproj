@@ -16,6 +16,8 @@
 		01B998ED20BEAACC00FA5E1D /* AugmentedRealityTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B998EC20BEAACC00FA5E1D /* AugmentedRealityTestTests.swift */; };
 		01B998F820BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B998F720BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift */; };
 		01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B9990720BEB93100FA5E1D /* WorldViewController.swift */; };
+		83EC14B023912914099A1D80 /* Pods_AugmentedRealityTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1191C4E008DD945A0F3D1A /* Pods_AugmentedRealityTestTests.framework */; };
+		89AA9012778C88A6895F43D1 /* Pods_AugmentedRealityTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */; };
 		9607962120D459A4003B0352 /* VSdb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9607961F20D459A4003B0352 /* VSdb.xcdatamodeld */; };
 		96CB660220D76D65007B1D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660120D76D65007B1D4A /* LoginViewController.swift */; };
 		96CB660420D791E9007B1D4A /* AddModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660320D791E9007B1D4A /* AddModelController.swift */; };
@@ -24,6 +26,7 @@
 		96CB661020D79C2B007B1D4A /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660C20D79C2B007B1D4A /* PetModel.swift */; };
 		96CB661520D79D04007B1D4A /* userAdded3dModels.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */; };
 		96CB661720D79E63007B1D4A /* HatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB661620D79E63007B1D4A /* HatModel.swift */; };
+		D97B605CA3A66DFBEFC12C29 /* Pods_AugmentedRealityTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BF81353661DCE6AA173DD0 /* Pods_AugmentedRealityTest.framework */; };
 		FA51003120C99F5D001CEC58 /* WorldFaceTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,10 @@
 		01B998F720BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityTestUITests.swift; sourceTree = "<group>"; };
 		01B998F920BEAACC00FA5E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B9990720BEB93100FA5E1D /* WorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
+		0591E3AE8DD0E508212FB53B /* Pods-AugmentedRealityTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestTests/Pods-AugmentedRealityTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		25BF81353661DCE6AA173DD0 /* Pods_AugmentedRealityTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79AC2310894F7928C53D6DD5 /* Pods-AugmentedRealityTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestUITests/Pods-AugmentedRealityTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		855CF5B230A4DFE1205FF4A5 /* Pods-AugmentedRealityTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9607962020D459A4003B0352 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		96CB660120D76D65007B1D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96CB660320D791E9007B1D4A /* AddModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelController.swift; sourceTree = "<group>"; };
@@ -68,6 +75,11 @@
 		96CB660C20D79C2B007B1D4A /* PetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
 		96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = userAdded3dModels.scnassets; sourceTree = SOURCE_ROOT; };
 		96CB661620D79E63007B1D4A /* HatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatModel.swift; sourceTree = "<group>"; };
+		9D3C7A4C3116CF6F36B88BB3 /* Pods-AugmentedRealityTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest.release.xcconfig"; sourceTree = "<group>"; };
+		A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1191C4E008DD945A0F3D1A /* Pods_AugmentedRealityTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0386D06C1521AC146EEFED8 /* Pods-AugmentedRealityTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestTests/Pods-AugmentedRealityTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCC5E395825953043D35F73B /* Pods-AugmentedRealityTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestUITests/Pods-AugmentedRealityTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldFaceTracking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97B605CA3A66DFBEFC12C29 /* Pods_AugmentedRealityTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EC14B023912914099A1D80 /* Pods_AugmentedRealityTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89AA9012778C88A6895F43D1 /* Pods_AugmentedRealityTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +119,8 @@
 				01B998EB20BEAACC00FA5E1D /* AugmentedRealityTestTests */,
 				01B998F620BEAACC00FA5E1D /* AugmentedRealityTestUITests */,
 				01B998D320BEAACB00FA5E1D /* Products */,
+				A70D3197B1D664FC0E26FD2C /* Pods */,
+				09BFD49B9DC16C229D740CA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +172,16 @@
 			path = AugmentedRealityTestUITests;
 			sourceTree = "<group>";
 		};
+		09BFD49B9DC16C229D740CA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25BF81353661DCE6AA173DD0 /* Pods_AugmentedRealityTest.framework */,
+				AD1191C4E008DD945A0F3D1A /* Pods_AugmentedRealityTestTests.framework */,
+				A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		960795DD20D4397D003B0352 /* VirtualStyles */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +209,19 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		A70D3197B1D664FC0E26FD2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				855CF5B230A4DFE1205FF4A5 /* Pods-AugmentedRealityTest.debug.xcconfig */,
+				9D3C7A4C3116CF6F36B88BB3 /* Pods-AugmentedRealityTest.release.xcconfig */,
+				B0386D06C1521AC146EEFED8 /* Pods-AugmentedRealityTestTests.debug.xcconfig */,
+				0591E3AE8DD0E508212FB53B /* Pods-AugmentedRealityTestTests.release.xcconfig */,
+				DCC5E395825953043D35F73B /* Pods-AugmentedRealityTestUITests.debug.xcconfig */,
+				79AC2310894F7928C53D6DD5 /* Pods-AugmentedRealityTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01B998FC20BEAACC00FA5E1D /* Build configuration list for PBXNativeTarget "AugmentedRealityTest" */;
 			buildPhases = (
+				A207DD07DA3F1BEF2634FC83 /* [CP] Check Pods Manifest.lock */,
 				01B998CE20BEAACB00FA5E1D /* Sources */,
 				01B998CF20BEAACB00FA5E1D /* Frameworks */,
 				01B998D020BEAACB00FA5E1D /* Resources */,
+				21729DE6D43F2DF16FA389F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01B998FF20BEAACC00FA5E1D /* Build configuration list for PBXNativeTarget "AugmentedRealityTestTests" */;
 			buildPhases = (
+				519A58B3ED26CB9C2D9B4BF9 /* [CP] Check Pods Manifest.lock */,
 				01B998E420BEAACC00FA5E1D /* Sources */,
 				01B998E520BEAACC00FA5E1D /* Frameworks */,
 				01B998E620BEAACC00FA5E1D /* Resources */,
@@ -224,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01B9990220BEAACC00FA5E1D /* Build configuration list for PBXNativeTarget "AugmentedRealityTestUITests" */;
 			buildPhases = (
+				A5A1B2B7DB36D56D10C90B8B /* [CP] Check Pods Manifest.lock */,
 				01B998EF20BEAACC00FA5E1D /* Sources */,
 				01B998F020BEAACC00FA5E1D /* Frameworks */,
 				01B998F120BEAACC00FA5E1D /* Resources */,
@@ -312,6 +356,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21729DE6D43F2DF16FA389F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		519A58B3ED26CB9C2D9B4BF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AugmentedRealityTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A207DD07DA3F1BEF2634FC83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AugmentedRealityTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5A1B2B7DB36D56D10C90B8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AugmentedRealityTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01B998CE20BEAACB00FA5E1D /* Sources */ = {
@@ -496,6 +615,7 @@
 		};
 		01B998FD20BEAACC00FA5E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855CF5B230A4DFE1205FF4A5 /* Pods-AugmentedRealityTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +632,7 @@
 		};
 		01B998FE20BEAACC00FA5E1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D3C7A4C3116CF6F36B88BB3 /* Pods-AugmentedRealityTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +649,7 @@
 		};
 		01B9990020BEAACC00FA5E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0386D06C1521AC146EEFED8 /* Pods-AugmentedRealityTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,6 +667,7 @@
 		};
 		01B9990120BEAACC00FA5E1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0591E3AE8DD0E508212FB53B /* Pods-AugmentedRealityTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -562,6 +685,7 @@
 		};
 		01B9990320BEAACC00FA5E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCC5E395825953043D35F73B /* Pods-AugmentedRealityTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +702,7 @@
 		};
 		01B9990420BEAACC00FA5E1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79AC2310894F7928C53D6DD5 /* Pods-AugmentedRealityTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
