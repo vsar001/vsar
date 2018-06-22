@@ -18,14 +18,10 @@
 		01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B9990720BEB93100FA5E1D /* WorldViewController.swift */; };
 		83EC14B023912914099A1D80 /* Pods_AugmentedRealityTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1191C4E008DD945A0F3D1A /* Pods_AugmentedRealityTestTests.framework */; };
 		89AA9012778C88A6895F43D1 /* Pods_AugmentedRealityTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */; };
-		9607962120D459A4003B0352 /* VSdb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9607961F20D459A4003B0352 /* VSdb.xcdatamodeld */; };
+		966B4FAE20DDB0860020E3D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */; };
+		966B4FAF20DDB0860020E3D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */; };
+		966B4FB020DDB0860020E3D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */; };
 		96CB660220D76D65007B1D4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660120D76D65007B1D4A /* LoginViewController.swift */; };
-		96CB660420D791E9007B1D4A /* AddModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660320D791E9007B1D4A /* AddModelController.swift */; };
-		96CB660E20D79C2B007B1D4A /* StatetmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660A20D79C2A007B1D4A /* StatetmentModel.swift */; };
-		96CB660F20D79C2B007B1D4A /* VSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660B20D79C2A007B1D4A /* VSUser.swift */; };
-		96CB661020D79C2B007B1D4A /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB660C20D79C2B007B1D4A /* PetModel.swift */; };
-		96CB661520D79D04007B1D4A /* userAdded3dModels.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */; };
-		96CB661720D79E63007B1D4A /* HatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB661620D79E63007B1D4A /* HatModel.swift */; };
 		D97B605CA3A66DFBEFC12C29 /* Pods_AugmentedRealityTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BF81353661DCE6AA173DD0 /* Pods_AugmentedRealityTest.framework */; };
 		FA51003120C99F5D001CEC58 /* WorldFaceTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */; };
 /* End PBXBuildFile section */
@@ -67,14 +63,8 @@
 		25BF81353661DCE6AA173DD0 /* Pods_AugmentedRealityTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AC2310894F7928C53D6DD5 /* Pods-AugmentedRealityTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestUITests/Pods-AugmentedRealityTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		855CF5B230A4DFE1205FF4A5 /* Pods-AugmentedRealityTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest.debug.xcconfig"; sourceTree = "<group>"; };
-		9607962020D459A4003B0352 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		96CB660120D76D65007B1D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		96CB660320D791E9007B1D4A /* AddModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelController.swift; sourceTree = "<group>"; };
-		96CB660A20D79C2A007B1D4A /* StatetmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatetmentModel.swift; sourceTree = "<group>"; };
-		96CB660B20D79C2A007B1D4A /* VSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSUser.swift; sourceTree = "<group>"; };
-		96CB660C20D79C2B007B1D4A /* PetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
-		96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = userAdded3dModels.scnassets; sourceTree = SOURCE_ROOT; };
-		96CB661620D79E63007B1D4A /* HatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatModel.swift; sourceTree = "<group>"; };
 		9D3C7A4C3116CF6F36B88BB3 /* Pods-AugmentedRealityTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest.release.xcconfig"; sourceTree = "<group>"; };
 		A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1191C4E008DD945A0F3D1A /* Pods_AugmentedRealityTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +104,7 @@
 		01B998C920BEAACB00FA5E1D = {
 			isa = PBXGroup;
 			children = (
-				960795DD20D4397D003B0352 /* VirtualStyles */,
+				96894D1520DDAA730093F28B /* MultiPeerConn */,
 				01B998D420BEAACB00FA5E1D /* AugmentedRealityTest */,
 				01B998EB20BEAACC00FA5E1D /* AugmentedRealityTestTests */,
 				01B998F620BEAACC00FA5E1D /* AugmentedRealityTestUITests */,
@@ -137,7 +127,6 @@
 		01B998D420BEAACB00FA5E1D /* AugmentedRealityTest */ = {
 			isa = PBXGroup;
 			children = (
-				96CB661420D79D04007B1D4A /* userAdded3dModels.scnassets */,
 				01B998D520BEAACB00FA5E1D /* AppDelegate.swift */,
 				01B998D720BEAACB00FA5E1D /* art.scnassets */,
 				01B998D920BEAACB00FA5E1D /* SelfViewController.swift */,
@@ -145,11 +134,10 @@
 				01B998DE20BEAACC00FA5E1D /* Assets.xcassets */,
 				01B998E020BEAACC00FA5E1D /* LaunchScreen.storyboard */,
 				01B998E320BEAACC00FA5E1D /* Info.plist */,
+				966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */,
 				01B9990720BEB93100FA5E1D /* WorldViewController.swift */,
 				FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */,
-				9607961F20D459A4003B0352 /* VSdb.xcdatamodeld */,
 				96CB660120D76D65007B1D4A /* LoginViewController.swift */,
-				96CB660320D791E9007B1D4A /* AddModelController.swift */,
 			);
 			path = AugmentedRealityTest;
 			sourceTree = "<group>";
@@ -182,31 +170,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		960795DD20D4397D003B0352 /* VirtualStyles */ = {
-			isa = PBXGroup;
-			children = (
-				96CB660520D79B8B007B1D4A /* DB */,
-				960795DF20D4531A003B0352 /* MultipeerConnect */,
-			);
-			path = VirtualStyles;
-			sourceTree = "<group>";
-		};
-		960795DF20D4531A003B0352 /* MultipeerConnect */ = {
+		96894D1520DDAA730093F28B /* MultiPeerConn */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = MultipeerConnect;
-			sourceTree = "<group>";
-		};
-		96CB660520D79B8B007B1D4A /* DB */ = {
-			isa = PBXGroup;
-			children = (
-				96CB660C20D79C2B007B1D4A /* PetModel.swift */,
-				96CB660A20D79C2A007B1D4A /* StatetmentModel.swift */,
-				96CB660B20D79C2A007B1D4A /* VSUser.swift */,
-				96CB661620D79E63007B1D4A /* HatModel.swift */,
-			);
-			path = DB;
+			path = MultiPeerConn;
 			sourceTree = "<group>";
 		};
 		A70D3197B1D664FC0E26FD2C /* Pods */ = {
@@ -334,8 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B998D820BEAACB00FA5E1D /* art.scnassets in Resources */,
-				96CB661520D79D04007B1D4A /* userAdded3dModels.scnassets in Resources */,
 				01B998E220BEAACC00FA5E1D /* LaunchScreen.storyboard in Resources */,
+				966B4FAE20DDB0860020E3D7 /* GoogleService-Info.plist in Resources */,
 				01B998DF20BEAACC00FA5E1D /* Assets.xcassets in Resources */,
 				01B998DD20BEAACC00FA5E1D /* Main.storyboard in Resources */,
 			);
@@ -345,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966B4FAF20DDB0860020E3D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966B4FB020DDB0860020E3D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,10 +336,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -440,13 +416,7 @@
 				96CB660220D76D65007B1D4A /* LoginViewController.swift in Sources */,
 				FA51003120C99F5D001CEC58 /* WorldFaceTracking.swift in Sources */,
 				01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */,
-				96CB661020D79C2B007B1D4A /* PetModel.swift in Sources */,
-				9607962120D459A4003B0352 /* VSdb.xcdatamodeld in Sources */,
-				96CB660420D791E9007B1D4A /* AddModelController.swift in Sources */,
 				01B998DA20BEAACB00FA5E1D /* SelfViewController.swift in Sources */,
-				96CB661720D79E63007B1D4A /* HatModel.swift in Sources */,
-				96CB660E20D79C2B007B1D4A /* StatetmentModel.swift in Sources */,
-				96CB660F20D79C2B007B1D4A /* VSUser.swift in Sources */,
 				01B998D620BEAACB00FA5E1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -757,19 +727,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9607961F20D459A4003B0352 /* VSdb.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9607962020D459A4003B0352 /* Model.xcdatamodel */,
-			);
-			currentVersion = 9607962020D459A4003B0352 /* Model.xcdatamodel */;
-			path = VSdb.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 01B998CA20BEAACB00FA5E1D /* Project object */;
 }

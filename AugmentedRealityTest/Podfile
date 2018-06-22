@@ -9,7 +9,8 @@ target 'AugmentedRealityTest' do
 
   # Pods for AugmentedRealityTest
   pod 'FileBrowser', '~> 1.0'
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'  
   target 'AugmentedRealityTestTests' do
     inherit! :search_paths
     # Pods for testing
