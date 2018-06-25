@@ -62,13 +62,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYq-d1-JDx">
-                                <rect key="frame" x="166" y="148" width="14" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kH-qj-Koh">
                                 <rect key="frame" x="164" y="411" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -84,7 +77,6 @@
                     <connections>
                         <outlet property="logInEmailTextField" destination="Suw-C2-cfB" id="7Xd-E8-Udt"/>
                         <outlet property="logInPassTextField" destination="lbr-7L-MWw" id="1Yn-SF-fQG"/>
-                        <outlet property="testLebelLogIn" destination="KYq-d1-JDx" id="rrw-lJ-RPy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76u-Jz-Pnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,6 +142,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="XBR-cW-ECx"/>
                     </view>
+                    <connections>
+                        <outlet property="signInLogin" destination="w9Q-Li-uKi" id="OoB-Nj-8hn"/>
+                        <outlet property="signInPass" destination="O4G-C3-eet" id="UHo-Cv-Bqq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKq-vt-LAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="f47-aw-RWA" userLabel="Exit" sceneMemberID="exit"/>

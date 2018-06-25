@@ -9,9 +9,9 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+//Password mindestens 6 zeichen!
 
-    @IBOutlet weak var testLebelLogIn: UILabel!
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var logInEmailTextField: UITextField!
     
@@ -30,15 +30,7 @@ class LoginViewController: UIViewController {
             Auth.auth().createUser(withEmail: logInEmailTextField.text!, password: logInPassTextField.text!) { (user, error) in
                 if error == nil {
                     print("You have successfully register and signed up")
-                    self.testLebelLogIn.text = "ok" //doesn't work, damn thing
                     self.performSegue(withIdentifier: "createUserSuccess", sender:sender)
-                    //Auth.auth().signIn(withEmail: self.logInEmailTextField.text!, password: self.logInPassTextField.text!)
-                    
-                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
-                    
-                    //let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                    //self.present(vc!, animated: true, completion: nil)
-                    
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     
@@ -49,37 +41,28 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        
     }
     
+    @IBOutlet weak var signInLogin: UITextField!
+    @IBOutlet weak var signInPass: UITextField!
+    
     @IBAction func signIn(_ sender: UIButton) {
-        if logInEmailTextField.text == "" {
+        if signInLogin.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
-            
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
-            
             present(alertController, animated: true, completion: nil)
             
         } else {
-            Auth.auth().signIn(withEmail: logInEmailTextField.text!, password: logInPassTextField.text!) { (user, error) in
+            Auth.auth().signIn(withEmail: signInLogin.text!, password: signInPass.text!) { (user, error) in
                 if error == nil {
                     print("You have successfully signed up")
-                    self.testLebelLogIn.text = "ok" //doesn't work, damn thing
                     self.performSegue(withIdentifier: "signInSuccess", sender:sender)
-                    //Auth.auth().signIn(withEmail: self.logInEmailTextField.text!, password: self.logInPassTextField.text!)
-                    
-                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
-                    
-                    //let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                    //self.present(vc!, animated: true, completion: nil)
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
-                    
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
