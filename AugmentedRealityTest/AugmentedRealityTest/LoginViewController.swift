@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         } else {
             Auth.auth().createUser(withEmail: logInEmailTextField.text!, password: logInPassTextField.text!) { (user, error) in
                 if error == nil {
-                    print("You have successfully signed up")
+                    print("You have successfully register and signed up")
                     self.testLebelLogIn.text = "ok" //doesn't work, damn thing
                     //Auth.auth().signIn(withEmail: self.logInEmailTextField.text!, password: self.logInPassTextField.text!)
                     
@@ -52,6 +52,38 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func signIn(_ sender: UIButton) {
+        if logInEmailTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else {
+            Auth.auth().signIn(withEmail: logInEmailTextField.text!, password: logInPassTextField.text!) { (user, error) in
+                if error == nil {
+                    print("You have successfully signed up")
+                    self.testLebelLogIn.text = "ok" //doesn't work, damn thing
+                    //Auth.auth().signIn(withEmail: self.logInEmailTextField.text!, password: self.logInPassTextField.text!)
+                    
+                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
+                    
+                    //let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    //self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
