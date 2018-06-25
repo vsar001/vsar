@@ -16,6 +16,8 @@
 		01B998ED20BEAACC00FA5E1D /* AugmentedRealityTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B998EC20BEAACC00FA5E1D /* AugmentedRealityTestTests.swift */; };
 		01B998F820BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B998F720BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift */; };
 		01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B9990720BEB93100FA5E1D /* WorldViewController.swift */; };
+		01DC251420E0F4A3004FEEDC /* DataServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC251320E0F4A3004FEEDC /* DataServiceManager.swift */; };
+		01DC251620E0F557004FEEDC /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC251520E0F557004FEEDC /* DataViewController.swift */; };
 		83EC14B023912914099A1D80 /* Pods_AugmentedRealityTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1191C4E008DD945A0F3D1A /* Pods_AugmentedRealityTestTests.framework */; };
 		89AA9012778C88A6895F43D1 /* Pods_AugmentedRealityTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */; };
 		966B4FAE20DDB0860020E3D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */; };
@@ -59,6 +61,8 @@
 		01B998F720BEAACC00FA5E1D /* AugmentedRealityTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityTestUITests.swift; sourceTree = "<group>"; };
 		01B998F920BEAACC00FA5E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B9990720BEB93100FA5E1D /* WorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldViewController.swift; sourceTree = "<group>"; };
+		01DC251320E0F4A3004FEEDC /* DataServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceManager.swift; sourceTree = SOURCE_ROOT; };
+		01DC251520E0F557004FEEDC /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = SOURCE_ROOT; };
 		0591E3AE8DD0E508212FB53B /* Pods-AugmentedRealityTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestTests/Pods-AugmentedRealityTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		25BF81353661DCE6AA173DD0 /* Pods_AugmentedRealityTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AC2310894F7928C53D6DD5 /* Pods-AugmentedRealityTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestUITests/Pods-AugmentedRealityTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 		96894D1520DDAA730093F28B /* MultiPeerConn */ = {
 			isa = PBXGroup;
 			children = (
+				01DC251320E0F4A3004FEEDC /* DataServiceManager.swift */,
+				01DC251520E0F557004FEEDC /* DataViewController.swift */,
 			);
 			path = MultiPeerConn;
 			sourceTree = "<group>";
@@ -414,6 +420,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CB660220D76D65007B1D4A /* LoginViewController.swift in Sources */,
+				01DC251620E0F557004FEEDC /* DataViewController.swift in Sources */,
+				01DC251420E0F4A3004FEEDC /* DataServiceManager.swift in Sources */,
 				FA51003120C99F5D001CEC58 /* WorldFaceTracking.swift in Sources */,
 				01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */,
 				01B998DA20BEAACB00FA5E1D /* SelfViewController.swift in Sources */,
