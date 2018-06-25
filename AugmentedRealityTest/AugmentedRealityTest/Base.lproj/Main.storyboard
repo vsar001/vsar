@@ -45,7 +45,7 @@
                                 <connections>
                                     <action selector="createUser:" destination="Zi6-Lg-6b6" eventType="touchUpInside" id="3oD-et-MRQ"/>
                                     <action selector="reg:" destination="sed-jG-UQd" eventType="touchUpInside" id="D9F-rs-GuX"/>
-                                    <segue destination="Fax-54-xbQ" kind="show" id="mAp-QR-wXQ"/>
+                                    <segue destination="Fax-54-xbQ" kind="show" identifier="createUserSuccess" id="mAp-QR-wXQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-fg-B78">
@@ -75,14 +75,6 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <segue destination="23U-0S-BiH" kind="show" id="ED1-vo-wyE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-pX-4b0">
-                                <rect key="frame" x="149" y="477" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="go to menu"/>
-                                <connections>
-                                    <segue destination="Fax-54-xbQ" kind="show" id="62B-OO-d4e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,7 +107,7 @@
                                 <connections>
                                     <action selector="dh:" destination="f47-aw-RWA" eventType="touchUpInside" id="X1r-5n-iPU"/>
                                     <action selector="signIn:" destination="23U-0S-BiH" eventType="touchUpInside" id="oTp-0K-HAh"/>
-                                    <segue destination="Fax-54-xbQ" kind="show" id="iJg-gh-6Nw"/>
+                                    <segue destination="Fax-54-xbQ" kind="show" identifier="signInSuccess" id="iJg-gh-6Nw"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9Q-Li-uKi">
@@ -174,6 +166,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iJg-gh-6Nw"/>
+        <segue reference="mAp-QR-wXQ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,6 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
-    
     @IBOutlet weak var testLebelLogIn: UILabel!
     
     @IBOutlet weak var logInEmailTextField: UITextField!
@@ -32,6 +31,7 @@ class LoginViewController: UIViewController {
                 if error == nil {
                     print("You have successfully register and signed up")
                     self.testLebelLogIn.text = "ok" //doesn't work, damn thing
+                    self.performSegue(withIdentifier: "createUserSuccess", sender:sender)
                     //Auth.auth().signIn(withEmail: self.logInEmailTextField.text!, password: self.logInPassTextField.text!)
                     
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
@@ -66,6 +66,7 @@ class LoginViewController: UIViewController {
                 if error == nil {
                     print("You have successfully signed up")
                     self.testLebelLogIn.text = "ok" //doesn't work, damn thing
+                    self.performSegue(withIdentifier: "signInSuccess", sender:sender)
                     //Auth.auth().signIn(withEmail: self.logInEmailTextField.text!, password: self.logInPassTextField.text!)
                     
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
@@ -105,13 +106,6 @@ class LoginViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-     
-     
-     @IBAction func reg(_ sender: UIButton) {
-     print("12345")
-     
-     }
-     
      
     */
 
