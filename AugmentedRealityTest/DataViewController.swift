@@ -38,20 +38,20 @@ class DataViewController: UIViewController {
 }
 
 extension DataViewController : DataServiceManagerDelegate {
-    
+
     func connectedDevicesChanged(manager: DataServiceManager, connectedDevices: [String]) {
         OperationQueue.main.addOperation {
-            self.connectionsLabel.text = "Connections: \(connectedDevices)"
+            //self.connectionsLabel.text = "Connections: \(connectedDevices)"
         }
     }
     
-    func colorChanged(manager: DataServiceManager, dataString: String) {
+    func dataChanged(manager: DataServiceManager, dataString: String) {
         OperationQueue.main.addOperation {
             switch dataString {
-            case "red":
-                self.change(color: .red)
-            case "yellow":
-                self.change(color: .yellow)
+            //case "red":
+              //  self.change(color: .red)
+            //case "yellow":
+              //  self.change(color: .yellow)
             default:
                 NSLog("%@", "Unknown color value received: \(dataString)")
             }
