@@ -70,6 +70,7 @@
 		79AC2310894F7928C53D6DD5 /* Pods-AugmentedRealityTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestUITests/Pods-AugmentedRealityTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		855CF5B230A4DFE1205FF4A5 /* Pods-AugmentedRealityTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest.debug.xcconfig"; sourceTree = "<group>"; };
 		966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		96C4193A20E2DCCF003B2C62 /* AugmentedRealityTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AugmentedRealityTest.entitlements; sourceTree = "<group>"; };
 		96CB660120D76D65007B1D4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9D3C7A4C3116CF6F36B88BB3 /* Pods-AugmentedRealityTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTest/Pods-AugmentedRealityTest.release.xcconfig"; sourceTree = "<group>"; };
 		A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +134,7 @@
 		01B998D420BEAACB00FA5E1D /* AugmentedRealityTest */ = {
 			isa = PBXGroup;
 			children = (
+				96C4193A20E2DCCF003B2C62 /* AugmentedRealityTest.entitlements */,
 				01B998D520BEAACB00FA5E1D /* AppDelegate.swift */,
 				01B998D720BEAACB00FA5E1D /* art.scnassets */,
 				01B998D920BEAACB00FA5E1D /* SelfViewController.swift */,
@@ -272,6 +274,11 @@
 					01B998D120BEAACB00FA5E1D = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					01B998E720BEAACC00FA5E1D = {
 						CreatedOnToolsVersion = 9.2;
@@ -600,6 +607,7 @@
 			baseConfigurationReference = 855CF5B230A4DFE1205FF4A5 /* Pods-AugmentedRealityTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AugmentedRealityTest/AugmentedRealityTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VM3Q36XX2Q;
 				INFOPLIST_FILE = AugmentedRealityTest/Info.plist;
@@ -617,6 +625,7 @@
 			baseConfigurationReference = 9D3C7A4C3116CF6F36B88BB3 /* Pods-AugmentedRealityTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AugmentedRealityTest/AugmentedRealityTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VM3Q36XX2Q;
 				INFOPLIST_FILE = AugmentedRealityTest/Info.plist;

@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+typealias fbUser = FirebaseAuth.User
 //Password mindestens 6 zeichen!
 
 class LoginViewController: UIViewController {
@@ -27,6 +28,7 @@ class LoginViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
             
         } else {
+            
             Auth.auth().createUser(withEmail: logInEmailTextField.text!, password: logInPassTextField.text!) { (user, error) in
                 if error == nil {
                     print("You have successfully register and signed up")
