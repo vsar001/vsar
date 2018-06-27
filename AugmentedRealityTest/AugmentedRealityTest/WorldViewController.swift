@@ -13,6 +13,12 @@ import Vision
 
 class WorldViewController: UIViewController, ARSCNViewDelegate {
     
+    let dataService = DataServiceManager()
+
+
+    @IBAction func sendFriend(_ sender: UIButton) {
+        
+    }
     @IBOutlet var viewModeARSCN: ARSCNView!
     
     var santaHat = SCNNode()
@@ -255,3 +261,26 @@ class WorldViewController: UIViewController, ARSCNViewDelegate {
     
 }
 
+extension WorldViewController : DataServiceManagerDelegate {
+    
+    func connectedDevicesChanged(manager: DataServiceManager, connectedDevices: [String]) {
+        OperationQueue.main.addOperation {
+            //self.connectionsLabel.text = "Connections: \(connectedDevices)"
+        }
+    }
+    
+    func dataChanged(manager: DataServiceManager, dataString: String) {
+        OperationQueue.main.addOperation {
+            switch dataString {
+                //case "SantaHat":
+                //var object = pfad : dataString
+                  //self.santaHat(dataString: "")
+                //case "yellow":
+            //  self.change(color: .yellow)
+            default:
+                NSLog("%@", "Unknown model value received: \(dataString)")
+            }
+        }
+    }
+    
+}

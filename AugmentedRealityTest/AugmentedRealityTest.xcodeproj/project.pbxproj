@@ -19,6 +19,9 @@
 		01DC251420E0F4A3004FEEDC /* DataServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC251320E0F4A3004FEEDC /* DataServiceManager.swift */; };
 		01DC251620E0F557004FEEDC /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC251520E0F557004FEEDC /* DataViewController.swift */; };
 		01DC251C20E12349004FEEDC /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DC251B20E12349004FEEDC /* Menu.storyboard */; };
+		01EF3E2D20E391FB00FF30C5 /* StatetmentTextes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF3E2C20E391FB00FF30C5 /* StatetmentTextes.swift */; };
+		01EF3E2F20E393EA00FF30C5 /* StatetmentTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF3E2E20E393EA00FF30C5 /* StatetmentTextViewController.swift */; };
+		01EF3E3720E3A6C700FF30C5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF3E3620E3A6C700FF30C5 /* MenuViewController.swift */; };
 		83EC14B023912914099A1D80 /* Pods_AugmentedRealityTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1191C4E008DD945A0F3D1A /* Pods_AugmentedRealityTestTests.framework */; };
 		89AA9012778C88A6895F43D1 /* Pods_AugmentedRealityTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E0B9AD4724EF4EB010E266 /* Pods_AugmentedRealityTestUITests.framework */; };
 		966B4FAE20DDB0860020E3D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 966B4FAD20DDB0860020E3D7 /* GoogleService-Info.plist */; };
@@ -65,6 +68,9 @@
 		01DC251320E0F4A3004FEEDC /* DataServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceManager.swift; sourceTree = SOURCE_ROOT; };
 		01DC251520E0F557004FEEDC /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = SOURCE_ROOT; };
 		01DC251B20E12349004FEEDC /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		01EF3E2C20E391FB00FF30C5 /* StatetmentTextes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatetmentTextes.swift; sourceTree = "<group>"; };
+		01EF3E2E20E393EA00FF30C5 /* StatetmentTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatetmentTextViewController.swift; sourceTree = "<group>"; };
+		01EF3E3620E3A6C700FF30C5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0591E3AE8DD0E508212FB53B /* Pods-AugmentedRealityTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestTests/Pods-AugmentedRealityTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		25BF81353661DCE6AA173DD0 /* Pods_AugmentedRealityTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AugmentedRealityTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AC2310894F7928C53D6DD5 /* Pods-AugmentedRealityTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AugmentedRealityTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AugmentedRealityTestUITests/Pods-AugmentedRealityTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 				01B998D920BEAACB00FA5E1D /* SelfViewController.swift */,
 				01B998DB20BEAACC00FA5E1D /* Main.storyboard */,
 				01DC251B20E12349004FEEDC /* Menu.storyboard */,
+				01EF3E2E20E393EA00FF30C5 /* StatetmentTextViewController.swift */,
 				01B998DE20BEAACC00FA5E1D /* Assets.xcassets */,
 				01B998E020BEAACC00FA5E1D /* LaunchScreen.storyboard */,
 				01B998E320BEAACC00FA5E1D /* Info.plist */,
@@ -145,6 +152,8 @@
 				01B9990720BEB93100FA5E1D /* WorldViewController.swift */,
 				FA51003020C99F5D001CEC58 /* WorldFaceTracking.swift */,
 				96CB660120D76D65007B1D4A /* LoginViewController.swift */,
+				01EF3E2C20E391FB00FF30C5 /* StatetmentTextes.swift */,
+				01EF3E3620E3A6C700FF30C5 /* MenuViewController.swift */,
 			);
 			path = AugmentedRealityTest;
 			sourceTree = "<group>";
@@ -424,12 +433,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CB660220D76D65007B1D4A /* LoginViewController.swift in Sources */,
+				01EF3E3720E3A6C700FF30C5 /* MenuViewController.swift in Sources */,
 				01DC251620E0F557004FEEDC /* DataViewController.swift in Sources */,
 				01DC251420E0F4A3004FEEDC /* DataServiceManager.swift in Sources */,
 				FA51003120C99F5D001CEC58 /* WorldFaceTracking.swift in Sources */,
 				01B9990820BEB93100FA5E1D /* WorldViewController.swift in Sources */,
 				01B998DA20BEAACB00FA5E1D /* SelfViewController.swift in Sources */,
 				01B998D620BEAACB00FA5E1D /* AppDelegate.swift in Sources */,
+				01EF3E2D20E391FB00FF30C5 /* StatetmentTextes.swift in Sources */,
+				01EF3E2F20E393EA00FF30C5 /* StatetmentTextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

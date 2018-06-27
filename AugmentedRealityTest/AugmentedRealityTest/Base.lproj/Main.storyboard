@@ -70,6 +70,29 @@
                                     <segue destination="23U-0S-BiH" kind="show" id="ED1-vo-wyE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2w-ei-Q5B">
+                                <rect key="frame" x="150" y="479" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="backdoor"/>
+                                <connections>
+                                    <action selector="backDoor:" destination="Zi6-Lg-6b6" eventType="touchUpInside" id="dgV-xQ-efx"/>
+                                    <segue destination="Fax-54-xbQ" kind="show" id="JSl-X5-H7M"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pO6-1f-RJz">
+                                <rect key="frame" x="139" y="170" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWr-OA-Y6c">
+                                <rect key="frame" x="40" y="175" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="am4-V5-fpL"/>
@@ -77,6 +100,7 @@
                     <connections>
                         <outlet property="logInEmailTextField" destination="Suw-C2-cfB" id="7Xd-E8-Udt"/>
                         <outlet property="logInPassTextField" destination="lbr-7L-MWw" id="1Yn-SF-fQG"/>
+                        <outlet property="userNameTextField" destination="pO6-1f-RJz" id="ozU-52-FkS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76u-Jz-Pnc" userLabel="First Responder" sceneMemberID="firstResponder"/>

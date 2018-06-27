@@ -13,6 +13,12 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
+    @IBAction func backDoor(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "createUserSuccess", sender:sender)
+    }
+    
+    @IBOutlet weak var userNameTextField: UITextField!
+    
     @IBOutlet weak var logInEmailTextField: UITextField!
     
     @IBOutlet weak var logInPassTextField: UITextField!
@@ -29,8 +35,20 @@ class LoginViewController: UIViewController {
         } else {
             Auth.auth().createUser(withEmail: logInEmailTextField.text!, password: logInPassTextField.text!) { (user, error) in
                 if error == nil {
-                    print("You have successfully register and signed up")
+                    DispatchQueue.main.async{
+                        let currentUser = Auth.auth().currentUser
+                        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                        changeRequest?.displayName = self.userNameTextField.text
+                        changeRequest?.commitChanges(completion: { (error) in
+                            if let error = error {
+                                print(error.localizedDescription)
+                                
+                            }
+                        })
+                        print("You have successfully register and signed up")
+                    }
                     self.performSegue(withIdentifier: "createUserSuccess", sender:sender)
+                    
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     
@@ -56,7 +74,9 @@ class LoginViewController: UIViewController {
         } else {
             Auth.auth().signIn(withEmail: signInLogin.text!, password: signInPass.text!) { (user, error) in
                 if error == nil {
+                    DispatchQueue.main.async{
                     print("You have successfully signed up")
+                        } 
                     self.performSegue(withIdentifier: "signInSuccess", sender:sender)
                     
                 } else {

@@ -13,6 +13,28 @@ import Vision
 
 class SelfViewController: UIViewController, ARSCNViewDelegate {
 
+    
+    var textStatement : String = ""
+    
+    @IBAction func writeNewStatetment(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Give Your Statement!", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Input your statement here..."
+        })
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            
+            if let name = alert.textFields?.first?.text {
+                print("Your name: \(name)")
+                self.textStatement = name
+            }
+        }))
+        
+        self.present(alert, animated: true)
+    }
+    
     @IBOutlet weak var viewModeARSCN: ARSCNView!
     
     @IBOutlet weak var modelCollectionMenue: UICollectionView!
@@ -44,7 +66,7 @@ class SelfViewController: UIViewController, ARSCNViewDelegate {
         viewModeARSCN.delegate = self
      
         // creates text with depth
-        let text = SCNText(string: " was geht jo !", extrusionDepth: 1)
+        let text = SCNText(string: textStatement, extrusionDepth: 1)
         
  
         // creates material object, sets color, assigns material to text
@@ -65,6 +87,7 @@ class SelfViewController: UIViewController, ARSCNViewDelegate {
         viewModeARSCN.autoenablesDefaultLighting = true
         
     }
+    
     func addModel(SceneView: ARSCNView) {
         //  let modelNode = SCNNode()
         
